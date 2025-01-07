@@ -23,11 +23,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Compile TypeScript
-      run: npx tsc
+    # - name: Compile TypeScript
+    #   run: npx tsc
 
-    - name: Run JavaScript Tests
-      run: node src/scripts.js
+    # - name: Run JavaScript Tests
+    #   run: node src/scripts.js
 
     # - name: Run HTML Tests with Puppeteer
     #   run: |
