@@ -26,6 +26,9 @@ jobs:
     - name: Compile TypeScript
       run: npx tsc
 
+    - name: List files
+      run: ls -R
+
     - name: Run JavaScript Tests
       run: node src/scripts.js
 
