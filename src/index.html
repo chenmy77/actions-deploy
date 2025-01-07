@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Issues Counter</title>
+</head>
+<body>
+  <h1>GitHub Issues Counter</h1>
+  <p>Total Issues with Label "bug": <span id="issue-count">Loading...</span></p>
+
+  <!-- Include compiled JavaScript -->
+     <!-- 
+  <script src="src/scripts.js" type="module"></script>
+
+  <script type="module">
+    import { fetchAndCountIssues } from './src/scripts.js';
+
+    const owner = 'libgit2';
+    const repo = 'libgit2';
+    const label = 'bug';
+    const token = 'your_personal_access_token';
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/issues?labels=${label}&state=open`;
+
+    // Call the function from the imported module
+    fetchAndCountIssues(apiUrl, token, 'issue-count');
+  </script> -->
+  
+</body>
+</html>
