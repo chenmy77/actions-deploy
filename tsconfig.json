@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
+    "target": "ES2024",
+    "module": "ES2022",
     "outDir": "./src",
     "rootDir": "./src",
-    "strict": true
+    "strict": true,
+    "esModuleInterop": true
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/*.ts"],
   "exclude": ["node_modules"]
 }
 
