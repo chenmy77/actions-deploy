@@ -25,16 +25,16 @@ jobs:
 
     - name: Compile TypeScript
       run: npx tsc
+    
+    - name: Setenv
+      run:
+      env:
+        GITHUB_TOKEN: ${{secrets.DASHBOARDTOKEN}}
 
     - name: Run JavaScript Tests
       run: node src/scripts.js
 
-    - name: Setenv
-      run:
-      env:
-        GITHUB_TOKEN: ${{ secrets.DASHBOARDTOKEN}}
-    
-
+ 
   # Single deploy job since we're just deploying
   deploy:
     environment:
