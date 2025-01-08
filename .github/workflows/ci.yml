@@ -11,7 +11,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    steps:
+    steps:    
     - name: Checkout code
       uses: actions/checkout@v3
 
@@ -26,10 +26,7 @@ jobs:
     - name: Compile TypeScript
       run: npx tsc
     
-    - name: Setenv
-      run:
-      env:
-        GITHUB_TOKEN: ${{secrets.DASHBOARDTOKEN}}
+    
 
     - name: Run JavaScript Tests
       run: node src/scripts.js
