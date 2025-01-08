@@ -1,4 +1,4 @@
-name: Run HTML and JavaScript Tests
+name: Run HTML and Deploy to Pages
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-html-and-js:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,14 +26,17 @@ jobs:
     - name: Compile TypeScript
       run: npx tsc
 
-    - name: List files
-      run: ls -R
-
     - name: Run JavaScript Tests
       run: node src/scripts.js
+    
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        name: './src'
 
-    # - name: Run HTML Tests with Puppeteer
-    #   run: |
-    #     npx puppeteer-cli evaluate src/test-html.js
-    #   env:
-    #     CI: true
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v2
+
+
+
+  
