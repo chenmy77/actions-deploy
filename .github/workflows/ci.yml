@@ -29,14 +29,20 @@ jobs:
     - name: Run JavaScript Tests
       run: node src/scripts.js
     
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
-      with:
-        name: './src'
 
-    - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v2
-
-
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: './src'
+      - id: deployment
+        uses: actions/deploy-pages@v4
 
   
