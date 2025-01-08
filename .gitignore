@@ -131,3 +131,4 @@ dist
 
 // js 
 ./src/scripts.js
+node_modules
