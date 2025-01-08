@@ -1,4 +1,6 @@
-export async function fetchAndCountIssues(apiUrl: string, token: string, elementId: string) {
+export async function fetchAndCountIssues(apiUrl: string, elementId: string) {
+    const token = process.env.GITHUB_TOKEN || '';
+    
     try {
       const response = await fetch(apiUrl, {
         headers: {
