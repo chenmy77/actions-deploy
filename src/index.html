@@ -11,7 +11,7 @@
 
   <!-- Include compiled JavaScript -->
      
-  <!-- <script src="scripts.js" type="module"></script>
+  <script src="scripts.js" type="module"></script>
 
   <script type="module">
     import { fetchAndCountIssues } from './scripts.js';
@@ -19,12 +19,11 @@
     const owner = 'chenmy77';
     const repo = 'actions-deploy';
     const label = 'bug';
-    const token = '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';
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/issues?labels=${label}&state=open`;
 
     // Call the function from the imported module
-    fetchAndCountIssues(apiUrl, token, 'issue-count');
-  </script> -->
+    fetchAndCountIssues(apiUrl,'issue-count');
+  </script> 
   
 </body>
 </html>
