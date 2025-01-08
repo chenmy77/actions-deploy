@@ -16,13 +16,10 @@
   <script type="module">
     import { fetchAndCountIssues } from './scripts.js';
 
-    // const owner = 'chenmy77';
-    const owner = 'microsoft';
-    // const repo = 'actions-deploy';
-    const repo = 'PowerToys';
-    // const label = 'bug';
-    const label = 'Issue-Bug';
-    const token = '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';
+    const owner = 'chenmy77';
+    const repo = 'actions-deploy';
+    const label = 'bug';
+    const token = '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';
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/issues?labels=${label}&state=open`;
 
     // Call the function from the imported module
