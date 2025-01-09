@@ -10,6 +10,10 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env: 
+        GITHUB_TOKEN: ${{secrets.DASHBOARDTOKEN}}
+        SUPER_SECRET: ${{ secrets.SuperSecret }}
+
 
     steps:    
     - name: Checkout code
@@ -19,6 +23,10 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '18'
+    
+    - shell : bash
+      run: echo $SUPER_SECRET
+
 
     - name: Install dependencies
       run: npm install
