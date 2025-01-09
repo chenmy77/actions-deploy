@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "tsc",
+        "deploy": "gh-pages -d .",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
@@ -12,6 +13,7 @@
     },
     "devDependencies": {
         "@types/node": "^22.10.5",
+        "gh-pages": "^6.3.0",
         "typescript": "^5.7.2"
     },
     "author": "",
