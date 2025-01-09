@@ -1,9 +1,7 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = fetchAndCountIssues;
-function fetchAndCountIssues() {
+module.exports = function fetchAndCountIssues() {
     console.log('Function called');
-}
+};
 // export async function fetchAndCountIssues(apiUrl: string, elementId: string) {
 //     const token = process.env.GITHUB_TOKEN || '';
 //     try {
