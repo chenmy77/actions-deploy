@@ -39,4 +39,3 @@ function fetchAndCountIssues(apiUrl, elementId) {
         }
     });
 }
-// Compile this TypeScript into scripts.js using `tsc`
