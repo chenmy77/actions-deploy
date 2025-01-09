@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.fetchAndCountIssues = fetchAndCountIssues;
+exports.default = fetchAndCountIssues;
 function fetchAndCountIssues() {
     console.log('Function called');
 }

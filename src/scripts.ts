@@ -1,4 +1,4 @@
-export function fetchAndCountIssues() {
+export default function fetchAndCountIssues() {
     console.log('Function called');
 }
 
